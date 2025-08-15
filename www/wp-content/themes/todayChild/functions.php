@@ -10,11 +10,9 @@ if ( ! function_exists( 'today_enqueue_styles' ) ) :
 	 * @return void
 	 */
 	function today_enqueue_styles() {
-		wp_enqueue_style(
-			'today',
-			get_parent_theme_file_uri( 'style-today.css' ),
-			array(),
-			wp_get_theme()->get( 'Version' )
+		wp_enqueue_style( 
+			'today', 
+			get_stylesheet_uri()
 		);
 	}
 endif;

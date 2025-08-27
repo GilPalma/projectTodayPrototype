@@ -1,6 +1,13 @@
-<?php wp_footer(); ?>
+    <footer>
+        <?php wp_footer(); ?>
+        <div>
+            Projecto Hoje
+        </div>
 
-<footer>
-    Copyright @<?= date("Y") ?>
+        <div>
+            Copyright @<?= date("Y") ?>
+        </div>
 
-</footer>
+    </footer>
+
+</body>

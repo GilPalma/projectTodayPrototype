@@ -6,6 +6,196 @@
  * Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-site-editing, block-patterns, rtl-language-support, sticky-post, threaded-comments, translation-ready, wide-blocks, block-styles, style-variations, accessibility-ready, blog, portfolio, news
  */
 
+:root {
+  --td-background-color: #AAA;
+  --td-primary-color: #0F0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    font-size: 16px;
+    width: 100%;
+}
+
 body {
-    background-color: #CBCBCB;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--td-background-color);
+}
+
+body > *, header, footer {
+    width: 300px;
+}
+
+ul, ol {
+  list-style: none;
+  list-style-position: inside;
+  padding: 0;
+  margin: 0;
+}
+
+.primary-color {
+  color: var(--td-primary-color);
+}
+
+/* --------------- Header --------------- */
+
+header {
+  padding: 20px 0;
+}
+
+header nav.main-menu ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: start;
+  align-items: center;
+  gap: 15px;
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+header nav.main-menu ul li {
+  border: 3px solid black;
+  border-radius: 15px;
+  padding: 8px;
+  box-shadow: 10px 10px 15px #6669;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  transition-property: top, left;
+  transition-duration: 100ms;
+  transition-timing-function: linear;
+}
+
+header nav.main-menu ul li:hover {
+  top: -4px;
+  left: -4px;
+  box-shadow: 12px 12px 17px #6669;
+}
+
+header nav.main-menu ul li a {
+  display: block;
+}
+
+.hero {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  font-size: 3rem;
+}
+
+.hero span {
+  margin-left: 10px;
+  font-weight: 600;
+}
+
+/* --------------- Footer --------------- */
+
+footer {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2.5rem;
+}
+
+/* --------------- Homepage --------------- */
+
+.page-template-page-homepage {
+
+}
+
+.page-template-page-homepage .intro .hero {
+
+}
+
+.page-template-page-homepage .intro .hero-navigation ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 15px;
+}
+
+.page-template-page-homepage .intro .hero-navigation ul li {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  width: calc(50% - 15px);
+  height: 15vh;
+  font-size: 4rem;
+  text-align: center;
+  border:
+}
+
+/* --------------- Media --------------- */
+
+/* It's commented out since it is the smallest/default */
+/* @media (min-width: 320px) {
+  body > *, header, footer {
+    width: 300px;
+  }
+} */
+
+@media (min-width: 375px) {
+  body > *, header, footer {
+    width: 350px;
+  }
+}
+
+@media (min-width: 425px) {
+  body > *, header, footer {
+    width: 400px;
+  }
+}
+
+@media (min-width: 768px) {
+  body > *, header, footer {
+    width: 800px;
+  }
+}
+
+@media (min-width: 1024px) {
+  body > *, header, footer {
+    width: 900px;
+  }
+}
+
+@media (min-width: 1280px) {
+  body > *, header, footer {
+    width: 1100px;
+  }
+}
+
+@media (min-width: 1440px) {
+  body > *, header, footer {
+    width: 1200px;
+  }
+}
+
+@media (min-width: 1920px) {
+  body > *, header, footer {
+    width: 1400px;
+  }
+}
+
+@media (min-width: 2560px) {
+  body > *, header, footer {
+    width: 2000px;
+  }
+}
+
+@media (min-width: 3840px) {
+  body > *, header, footer {
+    width: 3500px;
+  }
 }

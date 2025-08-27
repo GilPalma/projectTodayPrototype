@@ -7,9 +7,21 @@
 
 <?php get_header() ?>
 
-<div style="font-size: 100px;">
-    A Júlia é <span style="color: green; font-weight: 800;">porreira</span>. Sim, senhora.
-</div>
+<section class="intro">
+    <div class="hero">
+        Projecto <span class="primary-color">Hoje</span>
+    </div>
+
+    <?php
+        wp_nav_menu([
+            'menu' => 23,
+            'menu_class' => 'hero-navigation',
+            'container' => 'nav',
+            'container_aria_label' => 'Hero Navigations'
+        ]);
+    ?>
+</section>
+
 
 
 <?php get_footer() ?>

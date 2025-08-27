@@ -14,7 +14,7 @@
 
 	<?php
 		wp_nav_menu([
-			'menu' => 23,
+			'menu' => 8,
 			'menu_class' => 'hero-navigation',
 			'container' => 'nav',
 			'container_aria_label' => 'Hero Navigations'

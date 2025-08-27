@@ -9,7 +9,7 @@
 	<header>
 		<?php
 			wp_nav_menu([
-				'menu' => 5,
+				'menu' => 7,
 				'menu_class' => 'main-menu',
 				'container' => 'nav',
 				'container_aria_label' => 'Main Navigations'

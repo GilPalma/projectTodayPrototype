@@ -1,15 +1,17 @@
 <?php
 
-// Enqueues style.css on the front.
-if ( ! function_exists( 'today_enqueue_styles' ) ) {
-	function today_enqueue_styles() {
-		wp_enqueue_style(
-			'today',
-			get_stylesheet_uri()
-		);
-	}
-}
-add_action( 'wp_enqueue_scripts', 'today_enqueue_styles' );
+// Enqueues file.css on the front. -- only required for non default files
+// if ( ! function_exists( 'today_enqueue_styles' ) ) {
+// 	function today_enqueue_styles() {
+// 		wp_enqueue_style(
+// 			'today',
+// 			get_stylesheet_uri(),
+// 			[],
+// 			'0'
+// 		);
+// 	}
+// }
+// add_action( 'wp_enqueue_scripts', 'today_enqueue_styles' );
 
 if ( ! function_exists( 'today_enqueue_scripts' ) ) {
 	function today_enqueue_scripts() {

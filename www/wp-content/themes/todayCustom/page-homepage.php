@@ -9,7 +9,7 @@
 
 <section class="intro">
 	<div class="hero">
-		Projecto <span class="primary-color">Hoje</span>
+		Projecto <img src="<?= get_field("main_logo") ?>"/>
 	</div>
 
 	<?php
@@ -20,8 +20,11 @@
 			'container_aria_label' => 'Hero Navigations'
 		]);
 	?>
-</section>
 
+	<div class="summary">
+		<?php the_content(); ?>
+	</div>
+</section>
 
 
 <?php get_footer() ?>

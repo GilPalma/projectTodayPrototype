@@ -4,8 +4,9 @@
  */
 
 :root {
-	--td-background-color: #AAA;
-	--td-primary-color: #0F0;
+	--td-background-color: #641;
+	--td-primary-color: #007826;
+	--td-secondary-color: #983;
 }
 
 * {
@@ -26,7 +27,7 @@ body {
 }
 
 body > *, header, footer {
-		width: 300px;
+		width: 450px;
 }
 
 ul, ol {
@@ -39,6 +40,21 @@ ul, ol {
 .primary-color {
 	color: var(--td-primary-color);
 }
+
+.hero {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+	height: 25vh;
+	font-size: 3rem;
+}
+
+.hero span {
+	margin-left: 10px;
+	font-weight: 600;
+}
+
 
 /* --------------- Header --------------- */
 
@@ -80,20 +96,6 @@ header nav ul.main-menu li a {
 	display: block;
 }
 
-.hero {
-	display: flex;
-	flex-flow: row nowrap;
-	justify-content: center;
-	align-items: center;
-	height: 10vh;
-	font-size: 3rem;
-}
-
-.hero span {
-	margin-left: 10px;
-	font-weight: 600;
-}
-
 /* --------------- Footer --------------- */
 
 footer {
@@ -102,6 +104,7 @@ footer {
 	justify-content: space-between;
 	align-items: center;
 	font-size: 2.5rem;
+	padding-top: 10px;
 }
 
 /* --------------- Homepage --------------- */
@@ -110,88 +113,132 @@ footer {
 
 }
 
+.page-template-page-homepage header nav {
+	display: none;
+}
+
 .page-template-page-homepage .intro .hero {
-
+	font-size: 6rem;
 }
 
-.page-template-page-homepage .intro ul.hero-navigation {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-between;
-	align-items: stretch;
-	gap: 15px;
-}
-
-.page-template-page-homepage .intro ul.hero-navigation li {
+.page-template-page-homepage .intro nav {
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: center;
 	align-items: center;
-	width: calc(50% - 15px);
+	margin: 20px 0 80px;
+}
+
+.page-template-page-homepage .intro nav ul.hero-navigation {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-between;
+	align-items: stretch;
+	gap: 20px;
+	width: 100%;
+}
+
+.page-template-page-homepage .intro nav ul.hero-navigation li {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
 	height: 15vh;
 	font-size: 4rem;
 	text-align: center;
-	border: 1px solid blue;
+	border: 1px solid var(--td-primary-color);
+	border-radius: 15px;
+	transition-property: background-color, color;
+	transition-duration: 200ms;
+	transition-timing-function: ease-in-out;
+}
+
+.page-template-page-homepage .intro nav ul.hero-navigation li:hover {
+	background-color: var(--td-primary-color);
+	color: white;
+}
+
+.page-template-page-homepage .intro nav ul.hero-navigation li a {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+
+.page-template-page-homepage .intro .summary {
+	font-size: 4rem;
+	text-align: center;
 }
 
 /* --------------- Media --------------- */
 
+@media only screen and (inverted-colors) {
+  img, video {
+    filter: invert(100%);
+  }
+}
+
 /* It's commented out since it is the smallest/default */
-/* @media (min-width: 320px) {
-	body > *, header, footer {
-		width: 300px;
-	}
+/* @media only screen and (min-width: 320px) {
 } */
 
-@media (min-width: 375px) {
+@media only screen and (min-width: 375px) {
 	body > *, header, footer {
 		width: 350px;
 	}
 }
 
-@media (min-width: 425px) {
+@media only screen and (min-width: 425px) {
 	body > *, header, footer {
 		width: 400px;
 	}
 }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
 	body > *, header, footer {
 		width: 800px;
 	}
+	.page-template-page-homepage .intro nav ul.hero-navigation {
+		flex-flow: row wrap;
+	}
+	.page-template-page-homepage .intro nav ul.hero-navigation li {
+		width: calc(50% - 10px);
+	}
 }
 
-@media (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
 	body > *, header, footer {
 		width: 900px;
 	}
 }
 
-@media (min-width: 1280px) {
+@media only screen and (min-width: 1280px) {
 	body > *, header, footer {
 		width: 1100px;
 	}
 }
 
-@media (min-width: 1440px) {
+@media only screen and (min-width: 1440px) {
 	body > *, header, footer {
 		width: 1200px;
 	}
 }
 
-@media (min-width: 1920px) {
+@media only screen and (min-width: 1920px) {
 	body > *, header, footer {
 		width: 1400px;
 	}
 }
 
-@media (min-width: 2560px) {
+@media only screen and (min-width: 2560px) {
 	body > *, header, footer {
 		width: 2000px;
 	}
 }
 
-@media (min-width: 3840px) {
+@media only screen and (min-width: 3840px) {
 	body > *, header, footer {
 		width: 3500px;
 	}

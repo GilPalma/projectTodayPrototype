@@ -1,11 +1,11 @@
 	<footer>
 		<?php wp_footer(); ?>
 		<div>
-			Projecto Hoje
+			Projecto <span class="primary-color">Hoje</span>
 		</div>
 
 		<div>
-			Copyright @<?= date("Y") ?>
+			Copyright ©<?= date("Y") ?>
 		</div>
 
 	</footer>
